@@ -1,0 +1,63 @@
+body {
+  font: 14px/1.9 'Noto Sans JP', Arial, Verdana, æ¸¸ã‚´ã‚·ãƒƒã‚¯, YuGothic,'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3', 'Hiragino Kaku Gothic ProN', ãƒ¡ã‚¤ãƒªã‚ª, Meiryo,sans-serif;
+  font-weight: 300;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  color: #000;
+  background: #fff;
+}
+
+.header-wrapper {
+  height: 60px;
+}
+
+.header-logo {
+  width: 100px;
+  height: 24px;
+  display: block;
+  margin: 16px auto 18px;
+}
+
+.header-nav {
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+}
+
+/* ハンバーガーアイコンの領域 */
+.open {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+
+/* ハンバーガーアイコンの作成 */
+header span, header span:before, header span:after {
+  position: absolute;
+  height: 2px;/*線の太さ*/
+  width: 20px;/*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+}
+header span:before {
+  bottom: -6px;
+}
+header span:after {
+  bottom: -12px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.main-img {
+  width: 100%;
+}

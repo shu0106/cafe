@@ -1,0 +1,288 @@
+body {
+  font: 14px/1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+  font-weight: 300;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  color: #000;
+  background: #fff;
+}
+
+section {
+  text-align: center;
+}
+
+h1 {
+  display: inline-block;
+  height: 24px;
+  margin: 80px auto 64px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid black;
+  font-weight: 400;
+  font-family: 'Modern Antiqua', 'Noto Sans JP', serif;
+  font-size: 22px;
+  text-align: center;
+}
+
+p {
+  color: #000000;
+}
+
+.header-wrapper {
+  height: 60px;
+}
+
+.header-logo {
+  width: 100px;
+  height: 24px;
+  display: block;
+  margin: 16px auto 18px;
+}
+
+.header-nav {
+  font-family: "Modern Antiqua", "Noto Sans JP", serif;
+  font-weight: 400;
+}
+
+#menu {
+  display:none;
+}
+
+/* ハンバーガーアイコンの領域 */
+.open {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 18px;
+  height: 14px;
+}
+
+
+/* ハンバーガーアイコンの作成 */
+header span {
+  position: absolute;
+  left: 0;
+  width: 100%; /*長さ*/
+  height: 2px; /*線の太さ*/
+  border-radius: 3px;
+  background: black;
+  transition: 0.3s;
+}
+header span:nth-of-type(1) {
+  top: 0;
+}
+header span:nth-of-type(2) {
+  top: 6px;
+}
+header span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* アイコンのアニメーション */
+#menu:checked ~ .open span:nth-of-type(1) {
+  /* -webkit-transform: translateY(6px) rotate(-45deg); */
+  transform: translateY(6px) rotate(-45deg);
+}
+#menu:checked ~ .open span:nth-of-type(2) {
+  opacity: 0;
+}
+#menu:checked ~ .open span:nth-of-type(3) {
+  /* -webkit-transform: translateY(-20px) rotate(45deg); */
+  transform: translateY(-6px) rotate(45deg);
+}
+
+/* メニューリストの表記 */
+.menu-list li {
+  line-height: 27px;
+  padding: 20px 0;
+  border-bottom: 1px solid gray;
+  font-family:  "Modern Antiqua", "Noto Sans JP", serif;
+}
+.menu-list a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+.menu-list a:hover {
+  text-decoration: underline;
+}
+  /* SNSアイコンの表記 */
+.sns-list {
+  display: flex;
+}
+.sns-list img {
+  width: 18px;
+  border-radius: 4px;
+  margin: 18px 13px 12px;
+}
+
+.list-wrapper {
+  position: fixed;
+  top: -1000px;
+  transition:0.6s ease-in;
+  width: 100%;
+}
+
+.back {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+#menu:checked ~ .list-wrapper {
+  position: fixed;
+  top: 60px;
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  z-index: 1;
+}
+
+
+.main-img {
+  width: 100%;
+  z-index: -1;
+}
+
+.message p {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 84px;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%; */
+}
+
+.img-wrapper img {
+  width: calc( 100% / 3 );
+}
+
+.img-wrapper img:nth-of-type(7) {
+  width: 100%;
+}
+
+.bland-list img {
+  width: 168px;
+  margin: 14px;
+}
+.bland-list p {
+  margin-bottom: 58px;
+}
+
+.unit {
+  width:80%;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  margin: 0 auto;
+}
+
+.unit img {
+  width: 370px;
+  height: 224px;
+  margin: 0 18px 30px;
+  float: left;
+}
+
+.unit p {
+  text-align: left;
+  font-size: 14px;
+  padding-bottom: 68px;
+}
+
+.access-wrapper {
+  display: flex;
+  width:80%;
+  margin: 0 auto 126px ;
+}
+
+.access-wrapper  p {
+  text-align: left;
+  padding-right: 28px;
+}
+
+.gmap {
+  width: 60%;
+  position: relative;
+}
+
+.gmap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 56px;
+  font-size: 12px;
+}
+
+@media (min-width: 800px) {
+  .header-wrapper {
+    width: 180px;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  .main-img {
+    width: calc( 100% - 180px );
+    margin-right: auto;
+  }
+
+  section {
+    width: calc( 100% - 180px );
+    margin-right: auto;
+  }
+
+  .open, .back {
+    display: none;
+  }
+
+  .list-wrapper {
+    position: fixed;
+    top: 86px;
+    padding-left: 30px;
+    transition: none;
+  }
+
+  .list-wrapper li {
+    border-bottom: none;
+  }
+  .menu-list li {
+    padding: 10px 0;
+  }
+  .sns-list {
+    padding-top: 66px;
+  }
+  .sns-list img {
+    margin: 18px 9px 18px;
+  }
+
+  .bland-list {
+    display: flex;
+    justify-content: center;
+    width: 74%;
+    margin: 0 auto;
+  }
+  .bland-list li {
+    width: 20%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .bland-list img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+}
