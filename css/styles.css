@@ -163,10 +163,12 @@ header span:nth-of-type(3) {
 
 .img-wrapper img {
   width: calc( 100% / 3 );
+  height: auto;
 }
 
 .img-wrapper img:nth-of-type(7) {
   width: 100%;
+  height: auto;
 }
 
 .bland-list img {
@@ -185,10 +187,9 @@ header span:nth-of-type(3) {
 }
 
 .unit img {
-  width: 370px;
-  height: 224px;
+  width: 90%;
+  height: auto;
   margin: 0 18px 30px;
-  float: left;
 }
 
 .unit p {
@@ -198,7 +199,6 @@ header span:nth-of-type(3) {
 }
 
 .access-wrapper {
-  display: flex;
   width:80%;
   margin: 0 auto 126px ;
 }
@@ -209,7 +209,9 @@ header span:nth-of-type(3) {
 }
 
 .gmap {
-  width: 60%;
+  width: 90%;
+  padding-bottom: 90%;
+  margin: 20px auto;
   position: relative;
 }
 
@@ -282,6 +284,19 @@ footer p {
   .bland-list img {
     width: 100%;
     margin: 0 auto;
+  }
+
+  .unit img {
+    float: left;
+  }
+
+  .access-wrapper {
+    display: flex;
+  }
+
+  .gmap {
+    width: 70%;
+    padding-bottom: 30%;
   }
 
 
