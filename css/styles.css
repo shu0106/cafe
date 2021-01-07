@@ -150,7 +150,7 @@ header span:nth-of-type(3) {
 }
 
 .message p {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   padding-bottom: 84px;
 }
@@ -177,7 +177,8 @@ header span:nth-of-type(3) {
   margin: 14px;
 }
 .bland-list p {
-  margin-bottom: 58px;
+  margin: 0 auto 58px;
+  width: 90%;
 }
 
 .unit {
@@ -227,7 +228,7 @@ header span:nth-of-type(3) {
 footer p {
   text-align: center;
   padding-bottom: 56px;
-  font-size: 12px;
+  font-size: 9px;
 }
 
 @media (min-width: 800px) {
